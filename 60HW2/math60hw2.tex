@@ -1,0 +1,205 @@
+\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\usepackage{fullpage}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{scrextend}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{xspace}
+\usepackage[colorlinks]{hyperref}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+% --- style --- %
+\renewcommand{\labelenumi}{{ (\alph{enumi})}}
+\newcommand{\sand}{\quad \mbox{ and } \quad}
+%\newcommand{\ds}{\displaystyle}
+\allowdisplaybreaks
+
+% --- making \xi look less awful --- %
+\DeclareSymbolFont{CMletters}{OML}{cmm}{m}{it}
+\DeclareMathSymbol{\xi}{\mathord}{CMletters}{"18}
+
+% --- math --- %
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\Lt}[1]{\mathcal{L}\crb{#1}}
+\newcommand{\ilt}[1]{\mathcal{L}^{-1}\crb{#1}}
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\sqb}[1]{\left[ #1 \right]}
+\newcommand{\crb}[1]{\left\{ #1 \right\}}
+\newcommand{\lra}[1]{\left\langle #1 \right\rangle}
+\newcommand{\magn}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\pdr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdrr}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\im}[1]{\text{im}\pn{#1}}
+\newcommand{\m}[1]{\Z/#1\Z}
+
+\newcommand{\VEC}[1]{\ensuremath{\mathbf{#1}}\xspace}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\vectorproj}[2][]{\proj_{\VEC{#1}}\VEC{#2}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\spn}[1]{\text{span}\pn{#1}}
+
+\newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
+
+\name{Box \#$\rule{1cm}{0.15mm}$}
+\class{Math 60 Section 1}
+\assignment{Homework 2}
+\duedate{16 May 2018}
+
+\begin{document}
+
+%\begin{center}
+\noindent\textbf{Collaborators:} 
+%\end{center} 
+
+%\problemlist{}
+
+\begin{problem}[Colley 2.3 \#22]
+Find the gradient $\nabla f(\mathbf{a})$ where
+\[
+	f(x,y) = e^{xy}+\ln(x-y), \quad \mathbf{a}=(2,1).
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.3 \#33]
+Find the matrix $D\mathbf{f}(\mathbf{a})$ of partial derivatives, where
+\[
+	\mathbf{f}(s,t) = (s^2,st,t^2),\quad \mathbf{a} = (-1,1).
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.3 \#38]
+Find an equation for the plane tangent to the graph of $z=4\cos{(xy)}$ at
+the point $(\pi/3,1,2)$.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.3 \#42]
+Suppose that you have the following information concerning a differentiable function $f$:
+\[
+	f(2,3) = 12, \quad f(1.98,3) = 12.1, \quad f(2,3.01) = 12.2.
+\]
+\begin{enumerate}
+\item[(a)] Give an approximate equation for the plane tangent to the graph of $f$ at $(2,3,12)$.
+\item[(b)] Use the result of part (a) to estimate $f(1.98, 2.98)$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.4 \#2]
+Verify the sum rule for derivative matrices for the following pair of functions.
+\[
+	\mathbf{f}(x,y) = (e^{x+y},xe^y), \quad \mathbf{g}(x,y)=(\ln{(xy)},ye^x).
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.4 \#14]
+For the following function, determine all second-order partial derivatives (including mixed partials).
+\[
+	f(x,y) = e^{{x^2}+{y^2}}.
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.4 \#22]
+Consider the function $F(x,y,z)=2x^3y+xz^2+y^3z^5-7xyz.$
+\begin{enumerate}
+\item[(a)] Find $F_{xx},F_{yy},F_{zz}$.
+\item[(b)] Calculate the mixed second-order partials $F_{xy}, F_{yx}, F_{xz},
+F_{zx}, F_{yz}, F_{zy},$ and verify Theorem 4.3.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Colley 2.4 \#29a]
+The three-dimensional \textbf{heat equation} is the partial differential equation
+\[
+	k\pn{\pdrr{T}{x}+\pdrr{T}{y}+\pdrr{T}{z}} = \pdr{T}{t},
+\]
+where $k$ is a positive constant. It models the temperature $T(x,y,z,t)$ at the point $(x,y,z)$ and time $t$
+of a body in space.
+\begin{enumerate}
+\item[(a)] We examine a simplified version of the heat equation. Consider a straight wire "coordinatized" by $x$.
+Then the temperature $T(x,t)$ at time $t$ and position $x$ along the wire is modeled by the one-dimensional heat equation
+\[
+	k\pdrr{T}{x} = \pdr{T}{t}.
+\]
+Show that the function $T(x,t) = e^{-kt}\cos{x}$ satisfies this equation. Note that if $t$ is held constant
+at value $t_0$, then $T(x,t_0)$ shows how the temperature varies along the wire at time $t_0$. Graph the curves
+$z=T(x,t_0)$ for $t_0=0,1,10$, and use them to understand the graph of the surface $z=T(x,t)$ for some
+$t\geq 0$. Explain what happens to the temperature of the wire after a long period of time.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\end{document}
