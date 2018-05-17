@@ -142,7 +142,14 @@ and verify that it agrees with $f'(x)$ as computed directly.
 \newpage
 
 \begin{problem}[Poole 6.6 \#18]
-
+$T:U\rightarrow V$ and $S: V\rightarrow W$ are linear transformation and $\mathcal{B}$, $\mathcal{C}$, and $\mathcal{D}$ are bases for $U, V,$ and $W$, respectively. Compute
+$[S\circ T]_{\mathcal{D}\leftarrow\mathcal{B}}$ in two ways:
+\begin{enumerate}
+\item By finding $S\circ T$ directly and then computing its matrix 
+\item by finding the matrices of $S$ and $T$ separately and using Theorem 6.27.
+\end{enumerate}
+$T:\mathcal{P}_1\rightarrow\mathcal{P}_2$ defined by $T(p(x)) = p(x+1)$, $S:\mathcal{P}_2\rightarrow\mathcal{P}_2$ defined by $S(p(x)) = p(x+1)$,
+$\mathcal{B} = \crb{1,x}$, $\mathcal{C} = \mathcal{D} = \crb{1,x,x^2}$.
 \end{problem}
 
 \begin{solution}
@@ -151,7 +158,11 @@ and verify that it agrees with $f'(x)$ as computed directly.
 \newpage
 
 \begin{problem}[Poole 6.6 \#22]
-
+Determine whether the linear transfor­mation $T$ is invertible by considering its matrix with respect 
+to the standard bases. If $T$ is invertible, use Theorem 6.28 and the method of Example 6.82 to find $T^{-1}$.
+\[
+	T: \mathcal{P}_2 \rightarrow \mathcal{P}_2 \text{ defined by } T(p(x)) = p'(x).
+\]
 \end{problem}
 
 \begin{solution}
@@ -160,7 +171,11 @@ and verify that it agrees with $f'(x)$ as computed directly.
 \newpage
 
 \begin{problem}[Poole 6.6 \#32]
-
+a linear transformation $T : V \rightarrow V$ is given. If possible, find a basis $\mathcal{C}$ for $V$ such that the matrix
+$[T]_{\mathcal{C}}$ of $T$ with respect to $C$ is diagonal.
+\[
+	T: \R^2 \rightarrow \R^2 \text{ defined by } T\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}a-b\\a+b\end{bmatrix}.
+\]
 \end{problem}
 
 \begin{solution}
@@ -169,7 +184,11 @@ and verify that it agrees with $f'(x)$ as computed directly.
 \newpage
 
 \begin{problem}[Poole 6.6 \#34]
-
+a linear transformation $T : V \rightarrow V$ is given. If possible, find a basis $\mathcal{C}$ for $V$ such that the matrix
+$[T]_{\mathcal{C}}$ of $T$ with respect to $C$ is diagonal.
+\[
+	T: \mathcal{P}_2 \rightarrow \mathcal{P}_2 \text{ defined by } T\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}a-b\\a+b\end{bmatrix}.
+\]
 \end{problem}
 
 \begin{solution}
