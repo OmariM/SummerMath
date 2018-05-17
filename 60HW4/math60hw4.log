@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.4)  13 MAY 2018 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.4)  16 MAY 2018 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -937,11 +937,11 @@ Package rerunfilecheck Info: File `math60hw4.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 28072 strings out of 492990
- 667198 string characters out of 6132637
+ 28075 strings out of 492990
+ 667217 string characters out of 6132637
  833326 words of memory out of 5000000
  31136 multiletter control sequences out of 15000+600000
- 20070 words of font info for 64 fonts, out of 8000000 for 9000
+ 21355 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,12n,100p,724b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -953,7 +953,7 @@ ve/2017/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2
 ve/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on math60hw4.pdf (6 pages, 77802 bytes).
+Output written on math60hw4.pdf (6 pages, 78195 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
