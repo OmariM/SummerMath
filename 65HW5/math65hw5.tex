@@ -1,0 +1,197 @@
+\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\usepackage{fullpage}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{scrextend}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{xspace}
+\usepackage[colorlinks]{hyperref}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+% --- style --- %
+\renewcommand{\labelenumi}{{ (\alph{enumi})}}
+\newcommand{\sand}{\quad \mbox{ and } \quad}
+%\newcommand{\ds}{\displaystyle}
+\allowdisplaybreaks
+
+% --- making \xi look less awful --- %
+\DeclareSymbolFont{CMletters}{OML}{cmm}{m}{it}
+\DeclareMathSymbol{\xi}{\mathord}{CMletters}{"18}
+
+% --- math --- %
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\Lt}[1]{\mathcal{L}\crb{#1}}
+\newcommand{\ilt}[1]{\mathcal{L}^{-1}\crb{#1}}
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\sqb}[1]{\left[ #1 \right]}
+\newcommand{\crb}[1]{\left\{ #1 \right\}}
+\newcommand{\lra}[1]{\left\langle #1 \right\rangle}
+\newcommand{\magn}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\pdr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\im}[1]{\text{im}\pn{#1}}
+\newcommand{\m}[1]{\Z/#1\Z}
+
+\newcommand{\VEC}[1]{\ensuremath{\mathbf{#1}}\xspace}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\vectorproj}[2][]{\proj_{\VEC{#1}}\VEC{#2}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\spn}[1]{\text{span}\pn{#1}}
+
+\newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
+
+\name{Box \#$\rule{1cm}{0.15mm}$}
+\class{Math 65 Section 1}
+\assignment{Homework 5}
+\duedate{21 May 2018}
+
+\begin{document}
+
+%\begin{center}
+\noindent\textbf{Collaborators:} 
+%\end{center} 
+
+%\problemlist{}
+
+\begin{problem}[Poole 5.3 \#4]
+The given vectors
+\[
+	\mathbf{x}_1 = \begin{bmatrix}1\\1\\1\end{bmatrix}, \mathbf{x}_2 = \begin{bmatrix}1\\1\\0\end{bmatrix}, \mathbf{x}_3 = \begin{bmatrix}1\\0\\0\end{bmatrix},
+\]
+form a basis for $\R^3$. Apply the Gram-Schmidt Process to obtain an orthogonal basis. Then normalize this basis to obtain an orthonormal basis.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 5.3 \#6]
+The given vectors
+\[
+	\mathbf{x}_1 = \begin{bmatrix}2\\-1\\1\\2\end{bmatrix}, \mathbf{x}_2 = \begin{bmatrix}3\\-1\\0\\4\end{bmatrix}, \mathbf{x}_3 = \begin{bmatrix}1\\1\\1\\1\end{bmatrix},
+\]
+form a basis for a subspace $W$ of $\R^4$. Apply the Gram-Schmidt Process to obtain an orthogonal basis for $W$.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 5.3 \#18]
+The columns of $Q$ were obtained by applying the Gram-Schmidt Process to the columns of $A$. Find the upper triangular matrix $R$ such that $A = QR$.
+\[
+	A = \begin{bmatrix}1 & 3\\2 & 4\\-1 & -1 \\ 	0 & 1\end{bmatrix}, \quad Q = \begin{bmatrix}1 / \sqrt{6} & 1 / \sqrt{3} \\ 2 / \sqrt{6} & 0 \\  -1/\sqrt{6} & 1 / \sqrt{3} \\ 0 & 1 / \sqrt{3}\end{bmatrix}.
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 7.1 \#32]
+$\lra{\VEC{u},\VEC{v}}$ is an inner product. Prove that
+\[
+	\magn{\VEC{u}+\VEC{v}}^2 = \magn{\VEC{u}}^2 + 2\lra{\VEC{u},\VEC{v}} + \magn{\VEC{v}}^2
+\]
+is an identity.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 7.1 \#34]
+$\lra{\VEC{u},\VEC{v}}$ is an inner product. Prove that
+\[
+	\lra{\VEC{u},\VEC{v}} = \frac{1}{4}\magn{\VEC{u}+\VEC{v}}^2 - \frac{1}{4}\magn{\VEC{u}-\VEC{v}}^2
+\]
+is an identity.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 7.1 \#38]
+Apply the Gram-Schmidt Process to the basis $\mathcal{B}$ to obtain an orthogonal basis for the inner product space $V$ relative to the given inner product.
+\[
+	V = \R^2, \quad \mathcal{B} = \crb{\begin{bmatrix}1\\0\end{bmatrix},\begin{bmatrix}1\\1\end{bmatrix}}, \quad \lra{\VEC{u},\VEC{v}} = 4u_1v_1-2u_1v_2-2u_2v_1+7u_2v_2.
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 7.1 \#40]
+Apply the Gram-Schmidt Process to the basis $\mathcal{B}$ to obtain an orthogonal basis for the inner product space $V$ relative to the given inner product.
+\[
+	V = \mathcal{P}_2[0,1], \quad \mathcal{B} = \crb{1,1+x,1+x+x^2}, \quad \lra{f,g} = \int_a^b f(x)g(x)\,dx
+\]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[Poole 7.1 \#42]
+If we multiply the Legendre polynomial of degree $n$ by an appropriate scalar, we can obtain a polynomial $L_n(x)$ such that $L_n(1)=1$.
+\begin{enumerate}
+\item Find $L_0(x),L_1(x), L_2(x),$ and $L_3(x)$.
+\item It can be shown that $L_n(x)$ satisfies the recurrence relation
+\[
+	L_n(x) = \frac{2n-1}{n}xL_{n-1}(x)-\frac{n-1}{n}L_{n-2}(x)
+\]
+for all $n\geq2$. Verify this recurrence for $L_2(x)$ and $L_3(x)$. Then use it to compute $L_4(x)$ and $L_5(x)$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+
+
+
+
+\end{document}
