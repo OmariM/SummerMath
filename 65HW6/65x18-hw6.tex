@@ -1,0 +1,193 @@
+\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\usepackage{fullpage}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{scrextend}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{xspace}
+\usepackage[colorlinks]{hyperref}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+% --- style --- %
+\renewcommand{\labelenumi}{{ (\alph{enumi})}}
+\newcommand{\sand}{\quad \mbox{ and } \quad}
+%\newcommand{\ds}{\displaystyle}
+\allowdisplaybreaks
+
+% --- making \xi look less awful --- %
+\DeclareSymbolFont{CMletters}{OML}{cmm}{m}{it}
+\DeclareMathSymbol{\xi}{\mathord}{CMletters}{"18}
+
+% --- math --- %
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\Lt}[1]{\mathcal{L}\crb{#1}}
+\newcommand{\ilt}[1]{\mathcal{L}^{-1}\crb{#1}}
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\sqb}[1]{\left[ #1 \right]}
+\newcommand{\crb}[1]{\left\{ #1 \right\}}
+\newcommand{\lra}[1]{\left\langle #1 \right\rangle}
+\newcommand{\magn}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\pdr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\im}[1]{\text{im}\pn{#1}}
+\newcommand{\m}[1]{\Z/#1\Z}
+
+\newcommand{\VEC}[1]{\ensuremath{\mathbf{#1}}\xspace}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\vectorproj}[2][]{\proj_{\VEC{#1}}\VEC{#2}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\spn}[1]{\text{span}\pn{#1}}
+
+\newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
+
+\name{Box \#$\rule{1cm}{0.15mm}$}
+\class{Math 65 Section 1}
+\assignment{Homework 6}
+\duedate{24 May 2018}
+
+\begin{document}
+
+%\begin{center}
+\noindent\textbf{Collaborators:} 
+%\end{center} 
+
+%\problemlist{}
+
+
+\begin{problem}[1.] 
+The general linear $n^{\text{th}}$-order constant-coefficient homogeneous DE for a function $u(t)$ has the form
+\begin{equation}
+a_n u^{(n)} + a_{n-1} u^{(n-1)} + a_2 u'' + a_1 u' + a_0 u = 0
+\end{equation}
+Write this as a system of first-order ODEs, in matrix form.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[2.] 
+Find the general solution of $\mathbf{x} \, ' =  \begin{bmatrix} 2 & 1 \\ -3 & 6 \end{bmatrix} \mathbf{x}.$ Express your answer in the form $\mathbf{x}(t) = \Psi(t) \mathbf{c}$ where $\Psi(t)$ is a fundamental matrix.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[3.]
+ Find the general solution for the linear system
+\begin{equation}
+ \mathbf{x} \, ' = \begin{bmatrix} 2 & 2 & 1 \\ 1 & 3 & 1 \\ 1 & 2 &2 \end{bmatrix} \mathbf{x}.
+ \end{equation}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[4.]
+Suppose  $\lambda \in \C$  and  $\mathbf{v} \in \C^n$. Determine the real and imaginary parts of the  function
+\[  \mathbf{x}(t) = e^{\lambda t} \mathbf{v}.  \]
+For consistency in grading, assume $\lambda = \alpha + i \beta$   ($\alpha,\beta \in \R$) and $\mathbf{v} = \mathbf{p} + i \mathbf{q}$  ($\mathbf{p},\mathbf{q} \in \R^n$). 
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[5.] Find the eigenvalues and eigenvectors of the matrix $A = \begin{bmatrix} 2 & - 1 \\ 1 & 2 \end{bmatrix}$. If the eigenvalues are complex, express your eigenvectors in the form $\mathbf{p} + i \mathbf{q}$, where $\mathbf{p}, \mathbf{q} \in \R^2$.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[6.]  
+ Find the general real-valued solution for the system
+\begin{equation}
+\mathbf{x} \, ' = \begin{bmatrix} 2 & -1 \\ 1 & 2 \end{bmatrix} \mathbf{x}.
+ \end{equation}
+Express your answer in the form $\mathbf{x}(t) = \Psi(t) \mathbf{c}$ where $\Psi(t)$ is a fundamental matrix.
+ \end{problem}
+ 
+ \begin{solution}
+\vfill
+\end{solution}
+\newpage  
+
+\begin{problem}[7.] 
+Solve the initial value problem 
+\begin{equation}
+\mathbf{x} \, ' = \begin{bmatrix} 0 & 1 \\ -2 & -2 \end{bmatrix} \mathbf{x}
+\end{equation}
+with initial condition $\mathbf{x}(0) =  \begin{bmatrix}  -1 \\ 1 \end{bmatrix}$ and determine $\displaystyle \lim_{t \to \infty}  \mathbf{x}(t)$ for your solution.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[8.]
+Consider the inhomogeneous linear system
+\begin{equation}
+\mathbf{x} \,' = A \, \mathbf{x} + \mathbf{g}(t)
+\label{ls2}
+\end{equation}
+where $A \in M_{nn}(\R)$ and $\mathbf{g}:\R \to \R^n$.  Suppose $\mathbf{x}_p$ is a particular solution of the inhomogeneous linear system and  $\{  \mathbf{x}_1, \ldots, \mathbf{x}_n \}$ is a basis for the space of solutions of the associated homogeneous system $\mathbf{x} ' = A \, \mathbf{x}$. Prove that if  $\mathbf{y}$ is any solution of the inhomogeneous equation \eqref{ls2} then there must exist constants $c_1, \ldots, c_n$ such that 
+\[ \mathbf{y}(t) = c_1  \mathbf{x}_1(t) + \cdots +  c_n  \mathbf{x}_n(t)  +   \mathbf{x}_p(t).   \]
+Therefore, if you know \textit{one} solution to the inhomogeneous problem you know them \textit{all}, up to something in the homogeneous solution space. 
+  \end{problem}
+  
+  \begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\end{document}
+
+
+
+
+
+
+
