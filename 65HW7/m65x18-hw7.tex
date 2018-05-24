@@ -1,0 +1,203 @@
+\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\usepackage{fullpage}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{scrextend}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{xspace}
+\usepackage[colorlinks]{hyperref}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+% --- style --- %
+\renewcommand{\labelenumi}{{ (\alph{enumi})}}
+\newcommand{\sand}{\quad \mbox{ and } \quad}
+%\newcommand{\ds}{\displaystyle}
+\allowdisplaybreaks
+
+% --- making \xi look less awful --- %
+\DeclareSymbolFont{CMletters}{OML}{cmm}{m}{it}
+\DeclareMathSymbol{\xi}{\mathord}{CMletters}{"18}
+
+% --- math --- %
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\Lt}[1]{\mathcal{L}\crb{#1}}
+\newcommand{\ilt}[1]{\mathcal{L}^{-1}\crb{#1}}
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\sqb}[1]{\left[ #1 \right]}
+\newcommand{\crb}[1]{\left\{ #1 \right\}}
+\newcommand{\lra}[1]{\left\langle #1 \right\rangle}
+\newcommand{\magn}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\pdr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\im}[1]{\text{im}\pn{#1}}
+\newcommand{\m}[1]{\Z/#1\Z}
+
+\newcommand{\VEC}[1]{\ensuremath{\mathbf{#1}}\xspace}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\vectorproj}[2][]{\proj_{\VEC{#1}}\VEC{#2}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\spn}[1]{\text{span}\pn{#1}}
+
+\newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
+
+\name{Box \#$\rule{1cm}{0.15mm}$}
+\class{Math 65 Section 1}
+\assignment{Homework 7}
+\duedate{25 May 2018}
+
+\begin{document}
+
+\begin{problem}[1.] Suppose $A$ is a matrix with eigenvalues $\lambda_1 = -1, \lambda_2=2$ and corresponding eigenvectors 
+$\mathbf{v}_1=  \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \mathbf{v}_2=  \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+Use the given eigendata to provide a qualitative sketch of the phase portrait for the associated linear system $\mathbf{x}' = A \, \mathbf{x}$.  
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[2.] Let 
+$ M = \begin{bmatrix} 0 & q \\ -q & 0  \end{bmatrix}.$
+ Use the power series definition  to show
+ \[ e^{Mt} = \displaystyle  \begin{bmatrix} \cos qt & \sin qt \\ - \sin qt & \cos qt \end{bmatrix}. \]
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[3.] In this example we show that the property $e^{a+b} = e^a e^b$ does not extend  to matrices. 
+Let $A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ and $B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$.
+\begin{enumerate}
+\item[(a)] Compute $e^{At}$, $e^{Bt}$, and $e^{(A+B)t}$.
+\item[(b)] Show $e^{At} e^{Bt} \neq e^{(A+B)t}$.
+\item[(c)] Show $e^{At} e^{Bt} \neq e^{Bt} e^{At}$.
+\end{enumerate}
+If $AB = BA$ then $e^{At+Bt} = e^{At} e^{Bt} = e^{Bt} e^{At}$. You can freely use this fact when needed in this course, including in the next few exercises where it will come in handy!
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[4.] 
+Let $A = \begin{bmatrix} 1 & 1  \\ -1 & 1  
+\end{bmatrix}.$
+\begin{enumerate}
+\item[(a)] Compute $e^{At}$ by first expressing 
+$A$  in the form  $A = I + M$ for some matrix $M$. Be sure to justify your steps. 
+\item[(b)] Solve the initial-value problem $\mathbf{x}' = A \, \mathbf{x}$ with $\mathbf{x}(0)=  \begin{bmatrix} 1 \\ 2 \end{bmatrix}$. 
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[5.] 
+Consider the matrix $ A = \begin{bmatrix} 0 & 1  \\ 9 & 0 
+\end{bmatrix}. $ 
+\begin{enumerate}
+\item[(a)] Show that $A$ is diagonalizable and determine a matrix $P$ such that $P^{-1} A P = D$.
+\item[(b)] Use your result from part (a) to compute the matrix exponential $e^{At}$.
+\end{enumerate}
+Simplify your answer by using our hyperbolic trig friends $\cosh x = \frac{e^x + e^{-x}}{2}$ and $\sinh x = \frac{e^x - e^{-x}}{2}$ (it may help to remember these by recalling $\sinh 0 = 0$ and $\cosh 0 = 1$, like their cousins).
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[6.] Compute the matrix exponential for the system
+\begin{equation}
+ \mathbf{x} \, ' = \begin{bmatrix} a & b \\ 0 & a \end{bmatrix} \mathbf{x},\label{if}
+ \end{equation}
+where $a,b \in \R$ with $b \neq 0$. Hint: $A=aI + N$ for some matrix $N$. What is $N^2$? \\
+This is an example where the matrix is not diagonalizable ($a$ is an eigenvalue of algebraic multiplicity $2$ but geometric multiplicity $1$), so the ansatz method from yesterday's homework does not produce a full basis for the solution space (but now with $e^{At}$ we're all good!). 
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[7.] Compute the matrix exponential for the system
+\begin{equation}
+ \mathbf{x} \, ' = \begin{bmatrix} \alpha & 1 \\ -1 & \alpha \end{bmatrix} \mathbf{x},\label{if}
+ \end{equation}
+where $\alpha \in \R$ is a parameter.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[8.] Consider the initial-value problem for \eqref{if} with initial state $\mathbf{x}(0)=\mathbf{x}_0$.
+\begin{enumerate}
+\item[(a)] We know the solution of the IVP has the form $\mathbf{x}(t) =e^{At} \, \mathbf{x}_0$. Show that this can be expressed in the form $\mathbf{x}(t) = e^{\alpha t} R(t) \mathbf{x}_0$ where $R(t)$ is a (clockwise) rotation matrix. This shows directly how the matrix exponential flows the initial state by a combination of rotation (by $R(t)$) and dilation (expansion or contraction controlled by the $e^{\alpha t}$ scaling factor). 
+\item[(b)] Provide a qualitative sketch for the phase portrait in each case  $\alpha < 0$, $\alpha > 0$, or $\alpha = 0$.  
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
