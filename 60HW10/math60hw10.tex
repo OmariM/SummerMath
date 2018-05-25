@@ -174,11 +174,19 @@ point 20 miles due west of Cleveland. Further suppose that if you are $s$ miles 
 \newpage
 
 \begin{problem}[Colley 6.2 \#4]
-Determine whether
+Verify Green's Theorem for the given vector field
 \[
-	\mathbf{F} = 2x\sin{y}\mathbf{i} + x^2\cos{y}\mathbf{j}
+	\VEC{F}  = M(x,y)\VEC{i} + N(x,y)\VEC{j}
 \]
-is conservative. If it is, find a scalar potential function for $\mathbf{F}$.
+and region $D$ by calculating both 
+\[
+	\oint_{\partial D} M\,dx+N\,dy \sand \int\int_D (N_x-M_y)\,dA.
+\]
+where 
+\[
+	\VEC{F} =2y\VEC{i}+x\VEC{j},
+\]
+and $D$ is the semicircular region $x^2+y^2\leq a^2$, $y\geq 0$.
 \end{problem}
 
 \begin{solution}
