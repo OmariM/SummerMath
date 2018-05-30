@@ -1,0 +1,208 @@
+\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\usepackage{fullpage}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{scrextend}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{xspace}
+\usepackage[colorlinks]{hyperref}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+% --- style --- %
+\renewcommand{\labelenumi}{{ (\alph{enumi})}}
+\newcommand{\sand}{\quad \mbox{ and } \quad}
+%\newcommand{\ds}{\displaystyle}
+\allowdisplaybreaks
+
+% --- making \xi look less awful --- %
+\DeclareSymbolFont{CMletters}{OML}{cmm}{m}{it}
+\DeclareMathSymbol{\xi}{\mathord}{CMletters}{"18}
+
+% --- math --- %
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\Lt}[1]{\mathcal{L}\crb{#1}}
+\newcommand{\ilt}[1]{\mathcal{L}^{-1}\crb{#1}}
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\sqb}[1]{\left[ #1 \right]}
+\newcommand{\crb}[1]{\left\{ #1 \right\}}
+\newcommand{\lra}[1]{\left\langle #1 \right\rangle}
+\newcommand{\magn}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\pdr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\im}[1]{\text{im}\pn{#1}}
+\newcommand{\m}[1]{\Z/#1\Z}
+
+\newcommand{\VEC}[1]{\ensuremath{\mathbf{#1}}\xspace}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\vectorproj}[2][]{\proj_{\VEC{#1}}\VEC{#2}}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\spn}[1]{\text{span}\pn{#1}}
+
+\newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
+
+\name{Box \#$\rule{1cm}{0.15mm}$}
+\class{Math 65 Section 1}
+\assignment{Homework 10}
+\duedate{31 May 2018}
+
+\begin{document}
+
+%\begin{center}
+\noindent\textbf{Collaborators:} 
+%\end{center} 
+
+
+\begin{problem}[1.] (\textbf{Chemical Oscillator}) The Brusselator Model is a model for chemical oscillations (including biological oscillations):
+\begin{eqnarray}
+\label{al2}
+x' & = & a - b x + x^2 y - x \\
+\label{be2}
+y' & = & b x - x^2 y
+\end{eqnarray}
+where $a > 0$ and $b > 0$.  Show the system has a unique equilibrium point and this equilibrium point is unstable when $b > 1 + a^2$.
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\begin{problem}[2.]  (\textbf{Hamiltonian Systems}) Let $H(p_1, ..., p_n, q_1, ..., q_n)$ be a differentiable real-valued function of $2n$ variables (i.e., $H:\mathbb{R}^{2n} \rightarrow \mathbb{R})$.  A Hamiltonian system for $H$ is  the first order system of $2n$ equations defined by:
+$$\dot{p_i}(t) = -{\partial H \over \partial q_i}(p_1,\ldots,p_n,q_1,\ldots,q_n) \qquad i = 1,\dots, n;$$
+$$\dot{q_i}(t) = {\partial H \over \partial p_i}(p_1,\ldots,p_n,q_1,\ldots,q_n)  \qquad i = 1,\dots, n. $$
+$H$ is called the Hamiltonian and the equations for $p$ and $q$ are called Hamilton's equations. 
+
+\begin{enumerate}
+\item[(a)] When $n=1$ we have $H = H(p,q)$ with associated  system:
+\begin{eqnarray*}
+ \dot{p} & = &  -\frac{\partial H}{\partial q} \\
+ \dot{q} & = &  \frac{\partial H}{\partial q} 
+ \end{eqnarray*}
+ Show $H(p,q)$ is a conserved quantity for this system. 
+\item[(b)] In general,  $H = H(p_1, ..., p_n, q_1, ..., q_n)$. Use the chain rule and Hamilton's equations to show that $H$ is a conserved quantity for the system.  Hence the trajectories lie on level curves $H(\mathbf{p},\mathbf{q}) = C$ (i.e., $H$ is conserved quantity).  
+\end{enumerate}
+
+\noindent
+\textbf{Note:}  Hamiltonian systems are important in mechanics.  In particular, $q_i$ and $p_i$ represent particle positions and momenta and this calculation shows that the dynamics evolve on a level surface of the Hamiltonian.   For example, the harmonic oscillator $m \ddot{x} + k x = 0$ is a Hamiltonian system where $H(p,q)=\frac{k}{2} q^2 + \frac{1}{2m} p^2$, which represents the total energy of the system.  See StatMech (Phys 117) \& TheoMech (Phys 111) for more!
+
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[3.] (\textbf{General relativity and planetary orbits}) The relativistic equation for the orbit of a planet around the sun is
+\[  \frac{d^2u}{d \theta^2} + u = \alpha + \epsilon u^2,  \]
+where $u=1/(r(\theta))$ and $(r,\theta)$ are the polar coordinates of the planet in its plane of motion.  
+The parameter $\alpha > 0$ is determined from classical Newtonian mechanics and the term $\epsilon u^2$ is Einstein's correction.  Here we assume $0 < \epsilon <<1$ is a very small positive parameter.  
+\begin{enumerate}
+\item[(a)] Rewrite the equation as a system using $x$ and $y$ for your state variables.
+\item[(b)] Find the $x$ and $y$ nullclines and plot them on the same axes. 
+\item[(c)] Find all equilibrium points.
+\item[(d)] Show that, according to the linearization, one of the equilibrium points is a center and one is a saddle.   
+\item[(e)] Show that $E(x,y) = \frac{y^2}{2} - \alpha x + \frac{x^2}{2} - \epsilon \frac{x^3}{3}$ is a conserved quantity for the system and use tools from Math 60 to verify $E$ has a strict local minimum at the equilibrium point corresponding to the center (thus proving the linearization is accurate there).  Note that this equilibrium point corresponds to a circular planetary orbit, so you are showing this is stable (good for us!). 
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[4.] (\textbf{Epidemiology})
+Consider the following epidemic model where  susceptible individuals $x(t)$ are being added at
+a constant rate $r > 0$ per unit time (for example  births in the presence of a childhood
+disease such as measles in the absence of vaccination):
+\begin{eqnarray*}
+\dot{x} & = & -\alpha x y + r \\
+\dot{y} & = & \alpha x y - \beta y,
+\end{eqnarray*}
+where  $\alpha$, $\beta$, and $r$ are positive constants. For this problem assume
+$\alpha = \beta = 1$ and  $r < 4$.  You may also assume $x \geq 0$ (susceptible) and $y \geq 0$ (infected).  
+\begin{enumerate}
+\item[(a)] Find the $x$ and $y$ nullclines and plot them on the same axes.   
+\item[(b)]  Find all equilibrium points.  
+\item[(c)] Compute the linearization for each equilibrium point and sketch a qualitatively accurate
+phase portrait of the associated linearized system.   Remember we are
+assuming $ r< 4$.    
+\item[(d)] What does the model predict for large time for the infected population? How is this different than the SIR Model?
+\end{enumerate}
+\bigskip
+\noindent
+\textbf{Note:} Epidemiology is a great application of DEs. Mudd alum Nadia Abuelezam '09 started her epi-career in summer math and  is now a research fellow in the department of health policy and management and department of epidemiology at Harvard after earning her Ph.D. in Harvard's School of Public Health. She loves her work and is happy to talk to Mudders with an interest in the field (to quote her from a recent email:  ``I've learned that there are so many different fields covered by public health, mathematics, biology, chemistry, computer science!!"). See Math Bio 119 or Math 181 for more!
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+\begin{problem}[5.] (\textbf{Hopf Bifurcation})  Consider the system
+ \begin{eqnarray*}
+\dot{x} & = &\mu x - \omega y - x(x^2 + y^2)\\
+\dot{y} & = & \omega x + \mu y - y(x^2 + y^2)
+\end{eqnarray*}
+where $\omega >0$ and $\mu \in \mathbb{R}$.  This system has an equilibrium point at the origin. 
+\begin{enumerate}
+\item[(a)]  Use the linearization to show the origin changes from a stable spiral sink to an unstable spiral source as $\mu$ changes from $\mu < 0$ to $\mu > 0$. 
+\item[(b)] Use software to show what a typical phase portrait looks like in each case. For $\mu > 0$ when the origin becomes unstable what happens to trajectories that start near the origin? 
+\item[(c)] (Extra Credit; Cool Polar Form)
+Rewrite the system in polar coordinates and show that the system has a stable (attracting) periodic solution for  $\mu > 0$.  To begin, since $x^2 + y^2 = r^2$ we know $2 x \dot{x} + 2 y \dot{y} = 2 r \dot{r}$ so 
+\[ \dot{r} = \frac{1}{r} (x \dot{x} + y \dot{y}).  \]
+Now substitute in for $\dot{x}$ and $\dot{y}$ to obtain the equation for $\dot{r}$ (the radial dynamics; if $\dot{r} > 0$ the states are flowing radially outward, if $\dot{r} < 0$ the states are flowing radially inward). For $\theta$ we can use $\tan \theta = y/x$ so $\sec^2 \theta \, \dot{\theta} = \frac{x\dot{y} - y \dot{x}}{x^2}$ so
+\[ \dot{\theta} = \frac{1}{r^2} (x \dot{y} - y \dot{x}).  \]
+Again, substituting in for $\dot{x}$ and $\dot{y}$ will yield the $\theta$ dynamics (if $\dot{\theta} > 0$ the states are rotating counterclockwise, etc.). 
+\end{enumerate}
+The situation described here, where a stable equilibrium point becomes unstable at the same time that a periodic  solution is born, is called a \textit{Hopf bifurcation}. 
+\end{problem}
+
+\begin{solution}
+\vfill
+\end{solution}
+\newpage
+
+
+\end{document}
+
+
+
+
+
+
+
