@@ -6,8 +6,8 @@
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{marvosym}
-\usepackage{amssymb}
-\usepackage{wasysym}
+\usepackage{amsmath}
+\usepackage{esint}
 \usepackage{gensymb}
 \usepackage{mathrsfs}
 \usepackage{scrextend}
@@ -26,7 +26,7 @@
 % --- style --- %
 \renewcommand{\labelenumi}{{ (\alph{enumi})}}
 \newcommand{\sand}{\quad \mbox{ and } \quad}
-%\newcommand{\ds}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
 \allowdisplaybreaks
 
 % --- making \xi look less awful --- %
@@ -89,7 +89,7 @@
 %\problemlist{}
 
 \begin{problem}[Colley 7.3 \#4]
-Verify Stoke's Theorem for $S$ which is defined by $x^2+y^2+z^2=4$, $z\leq0$, oriented by downward normal and 
+Verify Stokes's Theorem for $S$ which is defined by $x^2+y^2+z^2=4$, $z\leq0$, oriented by downward normal and 
 \[
 	\VEC{F} = (2y-z)\VEC{i}+(x+y^2-z)\VEC{j}+(4y-3x)\VEC{k}.
 \]
@@ -115,10 +115,10 @@ Verify Gauss's Theorem for
 \end{solution}
 \newpage
 
-\begin{problem}[Colley 7.4 \#6]
-Use Gauss's Theorem to derive the \textbf{heat equation},
+\begin{problem}[Colley 7.4  T/F \#6]
+If $S$ is the unit sphere centered at the origin, then 
 \[
-	\sigma \rho \pdr{T}{t} = k \nabla^2T.
+	\iint_Sx^3\,dS=0.
 \]
 \end{problem}
 
@@ -127,38 +127,11 @@ Use Gauss's Theorem to derive the \textbf{heat equation},
 \end{solution}
 \newpage
 
-\begin{problem}[Colley 7.4 \#10]
-Consider the three-dimensional heat equation
-\begin{equation}
-\nabla^2u=\pdr{u}{t} \label{eq1}
-\end{equation}
-for functions $u(x, y, z, t)$. (Here $\nabla^2u$ denotes the
-Laplacian $\pdrr{u}{x} + \pdrr{u}{y} + \pdrr{u}{z}$.) In this exercise, show that any solution $T (x, y, z, t)$ to the heat equation is unique in the following sense: Let $D$ be a bounded solid region in $\R^3$ and suppose that the functions $\alpha(x, y, z)$ and $\phi(x, y, z, t)$ are given. Then there exists a unique solution $T (x, y, z, t)$ to equation (1) that satisfies the conditions
-\begin{equation}
-T(x,y,z,0) = \alpha(x,y,z), \quad \text{for } (x,y,z)\in D, \label{eq2}
-\end{equation}
-and
+\begin{problem}[Colley 7.4 T/F \#10]
 \[
-	T(x,y,z,t) = \phi(x,y,z,t), \quad \text{for } (x,y,z)\in \partial D \text{ and } t\geq0.
+	\iint_S\pn{-y\VEC{i}+x\VEC{j}}\cdot d\VEC{S}=0,
 \]
-To establish uniqueness, let $T_1$ and $T_2$ be two solutions to equation (1) satisfying the conditions in (2) and set $w = T_1 - T_2$.
-\begin{enumerate}
-\item Show that w must also satisfy equation (1), plus the conditions that
-\[
-w(x,y,z,0)=0 \quad \text{for all }(x,y,z) \in D,
-\]
-and
-\[
- w(x,y,z,t)=0 \quad \text{for all }(x,y,z)\in\partial D \text{ and } t \geq0.
-\]
-\item For $t\geq0$, define the ``energy function"
-\[
-	E(t)=\frac{1}{2}\iiint_D[w(x,y,z,t)]^2\,dV.
-\]
-Use Green's first formula in Theorem 4.1 to show that $E'(t) \leq 0$ (i.e., that $E$ does not increase with time). 
-\item Show that $E(t) = 0$ for all $t \geq 0$. (Hint: Show that $E(0) = 0$ and use part (b).)
-\item Show that $w(x,y,z,t)=0$ for all $t \geq0$ and $(x, y, z) \in D$, and thereby conclude the uniqueness of solutions to equation (1) that satisfy the conditions in (2).
-\end{enumerate}
+ where $S$ is the cylinder $x^2+y^2=9$, $0\leq z\leq5.$
 \end{problem}
 
 \begin{solution}
@@ -167,103 +140,11 @@ Use Green's first formula in Theorem 4.1 to show that $E'(t) \leq 0$ (i.e., that
 \newpage
 
 \begin{problem}[Colley 7.4 \#18	]
-Suppose that $\VEC{J} = \sigma\VEC{E}$ (This is a version of Ohm's law that obtains in some electric conductors---here
-$\sigma$ is a positive constant known as the \textbf{conductivity}) If $\rho=0$, show that $\VEC{E}$ and $\VEC{B}$ satisfy the so-called
-\textbf{telegrapher's equation},
 \[
-	\nabla^2\VEC{F} = \mu_0\sigma\pdr{\VEC{F}}{t}+\mu_0\epsilon_0\pdrr{\VEC{F}}{t}.
+	\iint_S\nabla\times\VEC{F}\cdot d\VEC{S}
 \]
-\end{problem}
+has the same value for all piecewise smooth, oriented surfaces $S$ that have the same boundary curve $C$.
 
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
-\begin{problem}[True/False Questions]
-\begin{enumerate}
-\item[1.] The function $\VEC{X}:\R^2\rightarrow\R^3$ given by $\VEC{X}(s,t) = (2s+3t+1,4s-t,s+2t-7)$ parametrizes the plane $9x-y-14z=107.$
-\item[2.] The function $\VEC{X}:\R^2\rightarrow\R^3$ given by $\VEC{X}(s,t) = (s^2+3t-1,s^2+3,-2s^2+t)$ parametrizes the plane $x-7y-3z+22=0$.
-\item[3.] The function $\VEC{X}:(-\infty,\infty)\times(-\pi/2,\pi/2)\rightarrow\R^3$ given by $\VEC{X}(s,t)=(s^3+3\tan t-1,s^3+3,-2s^3+\tan t)$ parametrizes the plane
-$x-7y-3z+22=0$.
-\item[4.] The surface $\VEC{X}(s,t)=(s^2t,st^2,st)$ is smooth.
-\item[5.] The area of the portion of the surface $z=xe^{xy}$ lying over the disk of radius 2 centered at the origin is given by 
-\[
-	\int_0^2\int_0^{\sqrt{4-x^2}} \sqrt{1+e^{2xy}\pn{x^4+x^2y^2+2xy+1}}\,dy\,dx.
-\]
-\item[6.] If $S$ is the unit sphere centered at the origin, then $\int\int_Sx^3\,dS=0$.
-\item[7.] If $S$ is the cube with the eight vertices $(\pm1,\pm1,\pm1)$, then $\int\int_S\pn{1+x^3y}dS=0$.
-\item[8.] If $S$ denotes the rectangular box with faces given by the planes $x=\pm1, \quad y=\pm2, \quad z=\pm3$, then
-$\int\int_Sxys\,dS=0$.
-\end{enumerate}
-\end{problem}
-
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
-\begin{problem}[True/False Questions (Continued)]
-\begin{enumerate}
-\item[9.] If $S$ denotes the sphere of radius $a$ centered at the origin, then 
-\[
-	\int\int_S\pn{z^3-z+2}dS = \int\int_S\pn{x-y^5+2}dS.
-\]
-\item[10.] $\iint_S\pn{-y\VEC{i}+x\VEC{j}}\cdot d\VEC{S}=0$, where $S$ is the cylinder $x^2+y^2=9$, $0\leq z\leq5.$
-\item[11.] Let $S$ denote the closed cylinder with lateral surface given by $y^2+z^2=4$, front by $x=7$, and back by $x=-1$, and oriented
-by outward normals. Then $\int_Sx\VEC{i}\cdot d\VEC{S}=24\pi$.
-\item[12.] If $S$ is the portion of the cylinder $x^2+y^2=16$, $-2\leq z\leq7$, then $\int\int_S \nabla\times\pn(y\VEC{i})\cdot d\VEC{S}=0$.
-\item[13.] $\iint_S\VEC{F}\cdot d\VEC{S}=6\pi$, where $S$ is the closed hemisphere $x^2+y^2+z^2=1$, $z\geq0$, together with the surface $x^2+y^2\leq1$, $z=0$ and
-$\VEC{F} = yz\VEC{i}-xz\VEC{i}+3\VEC{k}$.
-\item[14.] If $S$ is the level set of a function $f(x,y,z)$ and $\nabla f\neq\VEC{0}$, then the flux of $\nabla f$ across $S$ is never zero.
-\item[15.] A smooth surface has at most two orientations.
-\item[16.] A smooth, connected surface is always orientable.
-\end{enumerate}
-
-\end{problem}
-
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
-\begin{problem}[True/False Questions (Continued)]
-\begin{enumerate}
-\item[17.] If $\VEC{F}$ is a vector field of class $C^1$ and $S$ is the ellipsoid $x^2+4y^2+9z^2=36$, then $\int\int_S\nabla\times\VEC{F}\cdot d\VEC{S}=0$.
-\item[18.] $\iint_S\nabla\times\VEC{F}\cdot d\VEC{S}$ has the same value for all piecewise smooth, oriented surfaces $S$ that have the same boundary curve $C$.
-\item[19.] If $\VEC{F}$ is a constant vector field, then $\oiint_S	\VEC{F}\cdot d\VEC{S}=0$, where $S$ is any piecewise smooth, closed, orientable surface.
-\item[20.] $\oiint_S\nabla\times\VEC{F}\cdot d\VEC{S}=0$, where $S$ is any closed, orientable, smooth surface in $\R^3$ and $\VEC{F}$ is of class $C^1$.
-\item[21.] Suppose that $\VEC{F}$ is a vector field of class $C^1$ whose domain contains the solid region $D$ in $\R^3$ and is such that $\magn{\VEC{F}(x,y,z)}\leq2$ at all 
-points on the boundary surface $S$ of $D$. Then $\iiint_D \nabla\cdot \VEC{F} dV$ is twice the surface area of $S$.
-\item[22.] If $S$ is an orientable, piecewise smooth surface and $\VEC{F}$ is a vector field of class $C^1$ that is everywhere tangent to the boundary of $S$,
-then $\iint_S\nabla\times\VEC{F}\cdot d\VEC{S}=0$.
-\item[23.] If $S$ is an orientable, piecewise smooth surface and $\VEC{F}$ is a vector field of class $C^1$ that is everywhere perpendicular to the boundary of $S$,
-then $\iint_S\nabla\times\VEC{F}\times d\VEC{S}=0$.
-\end{enumerate}
-\end{problem}
-
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
-\begin{problem}[True/False Questions (Continued)]
-\begin{enumerate}
-\item[24.] If $\VEC{F}$ is tangent to a closed surface $S$ that bounds a solid region $D$ in $\R^3$, then $\iiint_D \nabla\cdot \VEC{F}dV=0$.
-\item[25.] Let $S$ be a piecewise smooth, orientable surface and $\VEC{F}$ a vector field of class $C^1$. Then the flux of $\VEC{F}$ across $S$ is equal
-to the circulation of $\VEC{F}$ around the boundary of $S$.
-\item[26.] Let $D$ be a solid region in $\R^3$ and $\VEC{F}$ a vector field of class $C^1$. Then the flux of $\VEC{F}$ across the boundary of $D$ is equal
-to the integral of the divergence of $\VEC{F}$ over $D$.
-\item[27.] Suppose that $f$ and $g$ are of class $C^2$ and $D$ is a solid region in $\R^3$ with piecewise smooth boundary surface $S$ that is oriented away from $D$. If
-$g$ is harmonic, then $\iiint_D \nabla f\cdot \nabla g \, dV = \oiint_S f\nabla g\cdot d\VEC{S}.$
-\item[28.] Suppose that $f$ and $g$ are of class $C^2$ and $D$ is a solid region in $\R^3$ with piecewise smooth boundary surface $S$ that is oriented away from $D$. If
-$f$ and $g$ are harmonic, then $\oiint_S f\nabla g\cdot d\VEC{S}=-\oiint_Sg\nabla f\cdot d\VEC{S}.$
-\item[29.] If $\nabla^2f$ is known, then $f$ is uniquely determined up to a constant.
-\item[30.] If $S$ is a closed, orientable surface, then
-\[
-	\oiint_S \frac{\VEC{x}}{\magn{\VEC{x}}^3}\cdot d\VEC{S}=0.
-\]
-\end{enumerate}
 \end{problem}
 
 \begin{solution}
