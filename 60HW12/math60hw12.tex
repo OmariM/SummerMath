@@ -6,8 +6,8 @@
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{marvosym}
-\usepackage{amsmath}
-\usepackage{esint}
+\usepackage{amssymb}
+\usepackage{wasysym}
 \usepackage{gensymb}
 \usepackage{mathrsfs}
 \usepackage{scrextend}
@@ -26,7 +26,7 @@
 % --- style --- %
 \renewcommand{\labelenumi}{{ (\alph{enumi})}}
 \newcommand{\sand}{\quad \mbox{ and } \quad}
-\newcommand{\ds}{\displaystyle}
+%\newcommand{\ds}{\displaystyle}
 \allowdisplaybreaks
 
 % --- making \xi look less awful --- %
@@ -89,7 +89,7 @@
 %\problemlist{}
 
 \begin{problem}[Colley 7.3 \#4]
-Verify Stokes's Theorem for $S$ which is defined by $x^2+y^2+z^2=4$, $z\leq0$, oriented by downward normal and 
+Verify Stoke's Theorem for $S$ which is defined by $x^2+y^2+z^2=4$, $z\leq0$, oriented by downward normal and 
 \[
 	\VEC{F} = (2y-z)\VEC{i}+(x+y^2-z)\VEC{j}+(4y-3x)\VEC{k}.
 \]
@@ -115,41 +115,18 @@ Verify Gauss's Theorem for
 \end{solution}
 \newpage
 
-\begin{problem}[Colley 7.4  T/F \#6]
-If $S$ is the unit sphere centered at the origin, then 
-\[
-	\iint_Sx^3\,dS=0.
-\]
+\begin{problem}[True/False Questions]
+\begin{enumerate}
+\item[6.] If $S$ is the unit sphere centered at the origin, then $\int\int_Sx^3\,dS=0$.
+
+\item[10.] $\iint_S\pn{-y\VEC{i}+x\VEC{j}}\cdot d\VEC{S}=0$, where $S$ is the cylinder $x^2+y^2=9$, $0\leq z\leq5.$
+
+\item[18.] $\iint_S\nabla\times\VEC{F}\cdot d\VEC{S}$ has the same value for all piecewise smooth, oriented surfaces $S$ that have the same boundary curve $C$.
+\end{enumerate}
 \end{problem}
 
 \begin{solution}
 \vfill
 \end{solution}
 \newpage
-
-\begin{problem}[Colley 7.4 T/F \#10]
-\[
-	\iint_S\pn{-y\VEC{i}+x\VEC{j}}\cdot d\VEC{S}=0,
-\]
- where $S$ is the cylinder $x^2+y^2=9$, $0\leq z\leq5.$
-\end{problem}
-
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
-\begin{problem}[Colley 7.4 \#18	]
-\[
-	\iint_S\nabla\times\VEC{F}\cdot d\VEC{S}
-\]
-has the same value for all piecewise smooth, oriented surfaces $S$ that have the same boundary curve $C$.
-
-\end{problem}
-
-\begin{solution}
-\vfill
-\end{solution}
-\newpage
-
 \end{document}
