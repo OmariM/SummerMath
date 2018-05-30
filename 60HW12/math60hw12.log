@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.4)  29 MAY 2018 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.4)  30 MAY 2018 10:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -160,11 +160,9 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/wasysym.sty
-Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
-\symwasy=\mathgroup7
-LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
-(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup7
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
@@ -810,10 +808,10 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 83.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 83.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 83.
+LaTeX Font Info:    Try loading font information for U+esint on input line 83.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+(/usr/local/texlive/2017/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
 )
 LaTeX Font Info:    Try loading font information for U+rsfs on input line 83.
 
@@ -926,46 +924,37 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 136
-.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [4] [5]
-[6] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
+ [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./math60hw12.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `math60hw12.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 28103 strings out of 492990
- 667596 string characters out of 6132637
- 837398 words of memory out of 5000000
- 31148 multiletter control sequences out of 15000+600000
- 22879 words of font info for 73 fonts, out of 8000000 for 9000
+ 27947 strings out of 492990
+ 666145 string characters out of 6132637
+ 831778 words of memory out of 5000000
+ 31011 multiletter control sequences out of 15000+600000
+ 20915 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,10n,100p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,7n,100p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/wasy2-ps/wasy10.pfb>
-Output written on math60hw12.pdf (9 pages, 112910 bytes).
+ve/2017/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on math60hw12.pdf (5 pages, 82332 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
