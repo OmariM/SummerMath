@@ -128,7 +128,37 @@ Use Gauss's Theorem to derive the \textbf{heat equation},
 \newpage
 
 \begin{problem}[Colley 7.4 \#10]
-
+Consider the three-dimensional heat equation
+\begin{equation}
+\nabla^2u=\pdr{u}{t} \label{eq1}
+\end{equation}
+for functions $u(x, y, z, t)$. (Here $\nabla^2u$ denotes the
+Laplacian $\pdrr{u}{x} + \pdrr{u}{y} + \pdrr{u}{z}$.) In this exercise, show that any solution $T (x, y, z, t)$ to the heat equation is unique in the following sense: Let $D$ be a bounded solid region in $\R^3$ and suppose that the functions $\alpha(x, y, z)$ and $\phi(x, y, z, t)$ are given. Then there exists a unique solution $T (x, y, z, t)$ to equation (1) that satisfies the conditions
+\begin{equation}
+T(x,y,z,0) = \alpha(x,y,z), \quad \text{for } (x,y,z)\in D, \label{eq2}
+\end{equation}
+and
+\[
+	T(x,y,z,t) = \phi(x,y,z,t), \quad \text{for } (x,y,z)\in \partial D \text{ and } t\geq0.
+\]
+To establish uniqueness, let $T_1$ and $T_2$ be two solutions to equation (1) satisfying the conditions in (2) and set $w = T_1 - T_2$.
+\begin{enumerate}
+\item Show that w must also satisfy equation (1), plus the conditions that
+\[
+w(x,y,z,0)=0 \quad \text{for all }(x,y,z) \in D,
+\]
+and
+\[
+ w(x,y,z,t)=0 \quad \text{for all }(x,y,z)\in\partial D \text{ and } t \geq0.
+\]
+\item For $t\geq0$, define the ``energy function"
+\[
+	E(t)=\frac{1}{2}\iiint_D[w(x,y,z,t)]^2\,dV.
+\]
+Use Green's first formula in Theorem 4.1 to show that $E'(t) \leq 0$ (i.e., that $E$ does not increase with time). 
+\item Show that $E(t) = 0$ for all $t \geq 0$. (Hint: Show that $E(0) = 0$ and use part (b).)
+\item Show that $w(x,y,z,t)=0$ for all $t \geq0$ and $(x, y, z) \in D$, and thereby conclude the uniqueness of solutions to equation (1) that satisfy the conditions in (2).
+\end{enumerate}
 \end{problem}
 
 \begin{solution}
